@@ -1,0 +1,158 @@
+# ==============================================================================
+# 🛡️ .gitignore: DeepFake-VoiceFake-AI (Edge Multimodal Deepfake Detection)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. BẢO VỆ SỞ HỮU TRÍ TUỆ (CORE IP & EXPERIMENTAL ASSETS)
+# ------------------------------------------------------------------------------
+# Chặn code huấn luyện lõi, hàm loss tự chế và thuật toán độc quyền (nếu muốn giấu)
+# (Bỏ comment dấu # ở dưới khi bạn bắt đầu viết code lõi muốn giữ bí mật)
+# /src/core/
+# /src/training/
+# /src/models_arch/
+# /experiments/
+# /paper_drafts/
+
+# Bản thảo bài báo khoa học và tài liệu nháp
+*.docx
+*.pptx
+*.key
+paper_draft/
+manuscript/
+
+# ------------------------------------------------------------------------------
+# 2. MODEL WEIGHTS & CHECKPOINTS (Dung lượng lớn + Bản quyền mô hình)
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.pwf
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.engine
+*.plan
+*.tflite
+*.h5
+*.pkl
+*.joblib
+checkpoints/
+weights/
+saved_models/
+pretrained/
+
+# ------------------------------------------------------------------------------
+# 3. DATASETS & RAW MEDIA (Dữ liệu huấn luyện, Video, Audio)
+# ------------------------------------------------------------------------------
+data/
+datasets/
+raw_data/
+processed_data/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.flac
+*.aac
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# ------------------------------------------------------------------------------
+# 4. TRAINING LOGS & METRICS TRACKING
+# ------------------------------------------------------------------------------
+runs/
+logs/
+wandb/
+tensorboard/
+mlruns/
+lightning_logs/
+*.log
+*.tfevents.*
+
+# ------------------------------------------------------------------------------
+# 5. PYTHON & ENVIRONMENT ARTIFACTS
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ------------------------------------------------------------------------------
+# 6. IDE & EDITOR SETTINGS
+# ------------------------------------------------------------------------------
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 7. OPERATING SYSTEM ARTIFACTS
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ------------------------------------------------------------------------------
+# 8. C++ / BUILD OUTPUTS (Nếu dùng C++ Runtime tăng tốc)
+# ------------------------------------------------------------------------------
+*.obj
+*.o
+*.lib
+*.a
+*.dll
+*.dylib
+*.exe
+out/
+cmake-build-*/
